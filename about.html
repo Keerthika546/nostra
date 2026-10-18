@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Velloxa</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="navbar" class="bg-primary w-full flex items-center justify-between relative px-4">
+
+        <a href="index.html" class="flex items-center gap-2">
+            <img src="images/logo-icon.png" alt="Velloxa logo" class="h-14 w-14 object-contain scale-150">
+            <span class="text-xl font-semibold tracking-widest text-accent">VELLOXA</span>
+        </a>
+
+        <!-- Desktop links -->
+        <ul class="hidden md:flex gap-5 text-white">
+            <li><a class="hover:underline" href="index.html">Home</a></li>
+            <li><a class="hover:underline" href="collections.html">Collections</a></li>
+            <li><a class="hover:underline" href="contact.html">Contact</a></li>
+            <li><a class="hover:underline" href="about.html">About</a></li>
+        </ul>
+
+        <!-- Mobile button -->
+        <button id="menuBtn" aria-label="Toggle menu" class="md:hidden text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" width="30" height="30">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
+
+        <!-- Mobile menu -->
+        <ul id="menu"
+            class="hidden absolute right-0 top-full flex-col gap-3 bg-primary text-white text-right px-4 pb-4 z-50">
+            <li><a class="hover:underline" href="index.html">Home</a></li>
+            <li><a class="hover:underline" href="collections.html">Collections</a></li>
+            <li><a class="hover:underline" href="contact.html">Contact</a></li>
+            <li><a class="hover:underline" href="about.html">About</a></li>
+        </ul>
+    </div>
+
+  <section class="intro">
+    <h1>Clothing and accessories, chosen with care</h1>
+    <p>Velloxa is an online store for everyday style. We bring clothing, footwear, watches, bags and more together in one place, at prices that make sense.</p>
+  </section>
+ <!-- Our story -->
+  <section class="story">
+    <img src="images/about.jpg" alt="Velloxa team choosing products">
+    <div class="story-text">
+      <h2>Our story</h2>
+      <p>Velloxa started with a simple idea: good style should not be hard to find or hard to afford. Too many stores make you scroll through hundreds of products to find one you like.</p>
+      <p>So we keep our collection small and well chosen. Every product is picked for quality, comfort and value, and every page is built to be easy to browse.</p>
+    </div>
+  </section>
+  <section class="values">
+    <h2>What we stand for</h2>
+    <div class="value-grid">
+      <div class="value-box">
+        <h3>Quality first</h3>
+        <p>We check fabric, stitching and finish before a product goes on the shelf.</p>
+      </div>
+      <div class="value-box">
+        <h3>Fair prices</h3>
+        <p>Clear prices and honest discounts, with no hidden charges at checkout.</p>
+      </div>
+      <div class="value-box">
+        <h3>Easy shopping</h3>
+        <p>Simple filters, clear photos and quick delivery, so you find your style faster.</p>
+      </div>
+    </div>
+  </section>
+  <section class="sell">
+    <h2>What you will find here</h2>
+    <p>Men's and women's clothing, kids' wear, footwear, watches, bags, eyewear, jewellery, gadgets and beauty products.</p>
+    <a href="product.html" class="button">Shop the collection</a>
+  </section>
+
+  <section>
+  <!--Footer-->
+    <div class="w-full bg-black text-sm text-white py-3 pl-10 md:flex gap-14">
+        <div>
+            <div>
+                <p class="text-gray-500 font-bold mb-2">ABOUT</p>
+            </div>
+            <p>Contact Us</p>
+            <p>About Us</p>
+            <p>Careers</p>
+            <p>Stories</p>
+            <p>Press</p>
+            <p>Corporate Information</p>
+        </div>
+        <div>
+            <div>
+                <p class="text-gray-500 font-bold mb-2 mt-2">HELP</p>
+            </div>
+            <p>Payment</p>
+            <p>Shipping</p>
+            <p>Cancellation & Return</p>
+            <p>FAQ</p>
+        </div>
+        <div>
+            <div>
+                <p class="text-gray-500 font-bold mb-2 mt-2">CONSUMER POLICY</p>
+            </div>
+            <p>Cancellation & Return</p>
+            <p>Terms Of Use</p>
+            <p>Privacy</p>
+            <p>Security</p>
+            <p>Press</p>
+            <p>EPR Compliance</p>
+        </div>
+        <div class="socialmedia flex gap-3 mt-5 justify-center items-center mt-5">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-pinterest"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-tiktok"></i>
+        </div>
+    </div>
+</section>
+</body>
+</html>

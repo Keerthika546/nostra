@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!--discount-->
+    <div id="discount" class="w-full bg-gold-gradient text-primary ... p-5 flex justify-between">
+        <div id="discount" class="relative w-full bg-gold-gradient text-primary py-2 px-10 text-center">
+            <p class="text-xs md:text-sm uppercase tracking-widest">
+                <span class="font-serif-brand">Get ₹400 off your first order</span>
+                <span class="mx-2">|</span>
+                Use code
+                <span class="border border-dashed border-black px-2 py-0.5 font-semibold">FIRST300</span>
+            </p>
+            <button id="close" aria-label="Close offer bar"
+                class="absolute right-4 top-1/2 transform -translate-y-1/2 font-bold">✕</button>
+        </div>
+        <script>
+            const closeBtn = document.getElementById('close');
+            var discount = document.getElementById('discount')
+            closeBtn.addEventListener('click', () => {
+                discount.style.display = 'none';
+            });
+        </script>
+    </div>
+    <!--Navbar section-->
+    <div id="navbar" class="bg-primary w-full flex items-center justify-between relative px-4">
+
+        <a href="index.html" class="flex items-center gap-2">
+            <img src="images/logo-icon.png" alt="Velloxa logo" class="h-14 w-14 object-contain scale-150">
+            <span class="text-xl font-semibold tracking-widest text-accent">VELLOXA</span>
+        </a>
+
+        <!-- Desktop links -->
+        <ul class="hidden md:flex gap-5 text-white">
+            <li><a class="hover:underline" href="index.html">Home</a></li>
+            <li><a class="hover:underline" href="collections.html">Collections</a></li>
+            <li><a class="hover:underline" href="contact.html">Contact</a></li>
+            <li><a class="hover:underline" href="about.html">About</a></li>
+        </ul>
+
+        <!-- Mobile button -->
+        <button id="menuBtn" aria-label="Toggle menu" class="md:hidden text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" width="30" height="30">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
+
+        <!-- Mobile menu -->
+        <ul id="menu"
+            class="hidden absolute right-0 top-full flex-col gap-3 bg-primary text-white text-right px-4 pb-4 z-50">
+            <li><a class="hover:underline" href="index.html">Home</a></li>
+            <li><a class="hover:underline" href="collections.html">Collections</a></li>
+            <li><a class="hover:underline" href="contact.html">Contact</a></li>
+            <li><a class="hover:underline" href="about.html">About</a></li>
+        </ul>
+    </div>
+    <!--Banner image-->
+    <section class="bg-cream py-10 px-4">
+        <h2 class="text-center text-2xl md:text-3xl font-serif-brand mb-6">
+            Style that speaks for you
+        </h2>
+        <picture>
+            <source media="(max-width: 767px)" srcset="images/banner-mobile.jpg">
+            <img class="w-full h-auto object-cover object-center" src="images/banner.jpg" alt="Banner image">
+        </picture>
+    </section>
+    <section class="bg-cream py-10 px-4">
+        <h2 class="text-center text-2xl md:text-3xl font-serif-brand mb-6">
+            Shop by category
+        </h2>
+
+        <div class="promo-row max-w-6xl mx-auto">
+
+            <a href="product.html" class="promo-card">
+                <div class="relative">
+                    <img class="w-full h-64 object-cover" src="images/nike.jpg" alt="Men's clothing">
+                    <div class="promo-fade absolute bottom-0 left-0 right-0 text-center text-white pt-12 pb-3">
+                        <p class="text-xl font-bold">MIN. 60% OFF</p>
+                        <p class="text-sm">Everyday Essentials</p>
+                    </div>
+                </div>
+                <div class="text-center py-3">
+                    <p class="text-sm font-semibold uppercase tracking-widest">StrideX</p>
+                    <p class="text-xs text-muted">Sneakers · Track Pants · &amp; More</p>
+                </div>
+            </a>
+
+            <a href="product.html" class="promo-card">
+                <div class="relative">
+                    <img class="w-full h-64 object-cover" src="images/titan.jpg" alt="Watches">
+                    <div class="promo-fade absolute bottom-0 left-0 right-0 text-center text-white pt-12 pb-3">
+                        <p class="text-xl font-bold">30-50% OFF</p>
+                        <p class="text-sm">Style Meets Time</p>
+                    </div>
+                </div>
+                <div class="text-center py-3">
+                    <p class="text-sm font-semibold uppercase tracking-widest">Chronos</p>
+                    <p class="text-xs text-muted">Analog · Digital · &amp; More</p>
+                </div>
+            </a>
+            <a href="product.html" class="promo-card">
+                <div class="relative">
+                    <img class="w-full h-64 object-cover" src="images/rayban.jpg" alt="Watches">
+                    <div class="promo-fade absolute bottom-0 left-0 right-0 text-center text-white pt-12 pb-3">
+                        <p class="text-xl font-bold">30-50% OFF</p>
+                        <p class="text-sm">Style Meets Time</p>
+                    </div>
+                </div>
+                <div class="text-center py-3">
+                    <p class="text-sm font-semibold uppercase tracking-widest">Lumio</p>
+                    <p class="text-xs text-muted">Sunglasses · Blue-light · &amp; More</p>
+                </div>
+            </a>
+            <a href="product.html" class="promo-card">
+                <div class="relative">
+                    <img class="w-full h-64 object-cover" src="images/tani.jpg" alt="Watches">
+                    <div class="promo-fade absolute bottom-0 left-0 right-0 text-center text-white pt-12 pb-3">
+                        <p class="text-xl font-bold">30-50% OFF</p>
+                        <p class="text-sm">Style Meets Time</p>
+                    </div>
+                </div>
+                <div class="text-center py-3">
+                    <p class="text-sm font-semibold uppercase tracking-widest">Aurelle</p>
+                    <p class="text-xs text-muted">Earrings · Necklaces · &amp; More</p>
+                </div>
+            </a>
+            <a href="product.html" class="promo-card">
+                <div class="relative">
+                    <img class="w-full h-64 object-cover" src="images/boat.jpg" alt="Watches">
+                    <div class="promo-fade absolute bottom-0 left-0 right-0 text-center text-white pt-12 pb-3">
+                        <p class="text-xl font-bold">30-50% OFF</p>
+                        <p class="text-sm">Style Meets Time</p>
+                    </div>
+                </div>
+                <div class="text-center py-3">
+                    <p class="text-sm font-semibold uppercase tracking-widest">PulseBeat</p>
+                    <p class="text-xs text-muted">Earbuds · Smart Bands · &amp; More</p>
+                </div>
+            </a>
+            <a href="product.html" class="promo-card">
+                <div class="relative">
+                    <img class="w-full h-64 object-cover" src="images/wildcraft.jpg" alt="Watches">
+                    <div class="promo-fade absolute bottom-0 left-0 right-0 text-center text-white pt-12 pb-3">
+                        <p class="text-xl font-bold">30-50% OFF</p>
+                        <p class="text-sm">Style Meets Time</p>
+                    </div>
+                </div>
+                <div class="text-center py-3">
+                    <p class="text-sm font-semibold uppercase tracking-widest">TrailNest</p>
+                    <p class="text-xs text-muted">Backpacks · Sling Bags · &amp; More</p>
+                </div>
+            </a>
+            <a href="product.html" class="promo-card">
+                <div class="relative">
+                    <img class="w-full h-64 object-cover" src="images/levis.jpg" alt="Watches">
+                    <div class="promo-fade absolute bottom-0 left-0 right-0 text-center text-white pt-12 pb-3">
+                        <p class="text-xl font-bold">30-50% OFF</p>
+                        <p class="text-sm">Style Meets Time</p>
+                    </div>
+                </div>
+                <div class="text-center py-3">
+                    <p class="text-sm font-semibold uppercase tracking-widest">Indigo &amp; Co.</p>
+                    <p class="text-xs text-muted">Jeans · Jackets · &amp; More</p>
+                </div>
+            </a>
+            <a href="product.html" class="promo-card">
+                <div class="relative">
+                    <img class="w-full h-64 object-cover" src="images/lakme.jpg" alt="Watches">
+                    <div class="promo-fade absolute bottom-0 left-0 right-0 text-center text-white pt-12 pb-3">
+                        <p class="text-xl font-bold">30-50% OFF</p>
+                        <p class="text-sm">Style Meets Time</p>
+                    </div>
+                </div>
+                <div class="text-center py-3">
+                    <p class="text-sm font-semibold uppercase tracking-widest">Bloomé</p>
+                    <p class="text-xs text-muted">Skincare · Makeup · &amp; More</p>
+                </div>
+            </a>
+            <a href="product.html" class="promo-card">
+                <div class="relative">
+                    <img class="w-full h-64 object-cover" src="images/biba.jpg" alt="Watches">
+                    <div class="promo-fade absolute bottom-0 left-0 right-0 text-center text-white pt-12 pb-3">
+                        <p class="text-xl font-bold">30-50% OFF</p>
+                        <p class="text-sm">Style Meets Time</p>
+                    </div>
+                </div>
+                <div class="text-center py-3">
+                    <p class="text-sm font-semibold uppercase tracking-widest">Rangoli</p>
+                    <p class="text-xs text-muted">Kurtis · Sarees · &amp; More</p>
+                </div>
+            </a>
+            <a href="product.html" class="promo-card">
+                <div class="relative">
+                    <img class="w-full h-64 object-cover" src="images/firstcry.jpg" alt="Watches">
+                    <div class="promo-fade absolute bottom-0 left-0 right-0 text-center text-white pt-12 pb-3">
+                        <p class="text-xl font-bold">30-50% OFF</p>
+                        <p class="text-sm">Style Meets Time</p>
+                    </div>
+                </div>
+                <div class="text-center py-3">
+                    <p class="text-sm font-semibold uppercase tracking-widest">Tiny Trends</p>
+                    <p class="text-xs text-muted">Boys · Girls · &amp; More</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!--beauty sale-->
+    <div class="bg-primary text-accent flex gap-12 border-8 border-yellow-700 items-center justify-between">
+
+        <div class="p-5">
+            <img class="hidden md:block w-full h-64 object-cover" src="./images/offer.jpg">
+        </div>
+        <div class="p-5">
+            <p class="text-xs uppercase tracking-widest text-accent mb-2">Beauty Edit</p>
+            <h2 class="font-serif-brand text-3xl md:font-serif-brand text-4xl md:text-5xl text-accent mb-3">Glow
+                Like Gold</h2>
+            <p class="text-sm md:text-base text-gray-300 mb-6">Skincare and makeup picks for every skin tone.</p>
+            <a href="product.html"
+                class="inline-block bg-accent text-black font-semibold uppercase tracking-widest text-sm px-8 py-3 whitespace-nowrap rounded-full hover:bg-white transition">
+                Shop Beauty
+            </a>
+        </div>
+        <a href="product.html" class="pr-8 pt-5 pb-5">
+            <div class="relative">
+                <img style="box-shadow: 0 0 40px rgba(201,162,39,0.25);" class="w-30 h-20 md:w-full h-64 object-cover"
+                    src="./images/beauty2.jpg" alt="Watches">
+
+            </div>
+        </a>
+    </div>
+    </section>
+    </section>
+    <section>
+        <!--tech offer-->
+        <p class="text-center text-xs uppercase tracking-widest text-muted mt-5 mb-1">Smart picks</p>
+        <h2 class="text-center font-serif-brand text-2xl md:text-3xl">Tech you’ll love, under ₹2,000</h2>
+        <div class="relative">
+            <div style="background-color: #F3E7B8; background: linear-gradient(135deg, #F3E7B8, #FAF7F2);" id="dealsRow"
+                class="deals-row rounded-xl flex gap-4 w-full justify-start overflow-x-auto mt-10 p-5">
+                <div class="flex-shrink-0 w-40 transform transition-transform duration-300 hover:-translate-y-1">
+                    <img class="w-full h-40 object-cover rounded-xl" src="./images/gadgets/g1.jpg"
+                        alt="Wireless Earbuds">
+                    <p class="bg-primary text-accent text-center text-sm font-semibold rounded-lg py-1 mt-2">From ₹999
+                    </p>
+                    <p class="text-center text-sm font-medium text-primary mt-2">Wireless Earbuds</p>
+                </div>
+                <div class="flex-shrink-0 w-40 transform transition-transform duration-300 hover:-translate-y-1">
+                    <img class="w-full h-40 object-cover rounded-xl" src="./images/gadgets/g2.jpg" alt="Smart Watch">
+                    <p class="bg-primary text-accent text-center text-sm font-semibold rounded-lg py-1 mt-2">From ₹1,999
+                    </p>
+                    <p class="text-center text-sm font-medium text-primary mt-2">Smart Watch</p>
+                </div>
+                <div class="flex-shrink-0 w-40 transform transition-transform duration-300 hover:-translate-y-1">
+                    <img class="w-full h-40 object-cover rounded-xl" src="./images/gadgets/g3.jpg" alt="Smart Watch">
+                    <p class="bg-primary text-accent text-center text-sm font-semibold rounded-lg py-1 mt-2">From ₹1,999
+                    </p>
+                    <p class="text-center text-sm font-medium text-primary mt-2">Fitness Band</p>
+                </div>
+                <div class="flex-shrink-0 w-40 transform transition-transform duration-300 hover:-translate-y-1">
+                    <img class="w-full h-40 object-cover rounded-xl" src="./images/gadgets/g4.jpg" alt="Smart Watch">
+                    <p class="bg-primary text-accent text-center text-sm font-semibold rounded-lg py-1 mt-2">From ₹799
+                    </p>
+                    <p class="text-center text-sm font-medium text-primary mt-2">Power Bank 10000mAh</p>
+                </div>
+                <div class="flex-shrink-0 w-40 transform transition-transform duration-300 hover:-translate-y-1">
+                    <img class="w-full h-40 object-cover rounded-xl" src="./images/gadgets/g5.jpg" alt="Smart Watch">
+                    <p class="bg-primary text-accent text-center text-sm font-semibold rounded-lg py-1 mt-2">From ₹1,499
+                    </p>
+                    <p class="text-center text-sm font-medium text-primary mt-2">Bluetooth Speaker</p>
+                </div>
+                <div class="flex-shrink-0 w-40 transform transition-transform duration-300 hover:-translate-y-1">
+                    <img class="w-full h-40 object-cover rounded-xl" src="./images/gadgets/g6.jpg" alt="Smart Watch">
+                    <p class="bg-primary text-accent text-center text-sm font-semibold rounded-lg py-1 mt-2">From ₹1,799
+                    </p>
+                    <p class="text-center text-sm font-medium text-primary mt-2">Headphones</p>
+                </div>
+                <div class="flex-shrink-0 w-40 transform transition-transform duration-300 hover:-translate-y-1">
+                    <img class="w-full h-40 object-cover rounded-xl" src="./images/gadgets/g7.jpg" alt="Smart Watch">
+                    <p class="bg-primary text-accent text-center text-sm font-semibold rounded-lg py-1 mt-2">From ₹499
+                    </p>
+                    <p class="text-center text-sm font-medium text-primary mt-2">Phone Cases</p>
+                </div>
+                <div class="flex-shrink-0 w-40 transform transition-transform duration-300 hover:-translate-y-1">
+                    <img class="w-full h-40 object-cover rounded-xl" src="./images/gadgets/g8.jpg" alt="Smart Watch">
+                    <p class="bg-primary text-accent text-center text-sm font-semibold rounded-lg py-1 mt-2">From ₹599
+                    </p>
+                    <p class="text-center text-sm font-medium text-primary mt-2">Fast Charger</p>
+                </div>
+                <div class="flex-shrink-0 w-40 transform transition-transform duration-300 hover:-translate-y-1">
+                    <img class="w-full h-40 object-cover rounded-xl" src="./images/gadgets/g9.jpg" alt="Smart Watch">
+                    <p class="bg-primary text-accent text-center text-sm font-semibold rounded-lg py-1 mt-2">From ₹699
+                    </p>
+                    <p class="text-center text-sm">Wireless Mouse</p>
+                </div>
+                <div class="flex-shrink-0 w-40 transform transition-transform duration-300 hover:-translate-y-1">
+                    <img class="w-full h-40 object-cover rounded-xl" src="./images/gadgets/g10.jpg" alt="Smart Watch">
+                    <p class="bg-primary text-accent text-center text-sm font-semibold rounded-lg py-1 mt-2">From ₹549
+                    </p>
+                    <p class="text-center text-sm font-medium text-primary mt-2">Laptop Stand</p>
+                </div>
+            </div>
+            <button id="dealsPrev" aria-label="Scroll left"
+                class="hidden md:block absolute left-2 top-16 w-10 h-20 rounded-full bg-white shadow-md z-10">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button id="dealsNext" aria-label="Scroll right"
+                class="hidden md:block absolute right-2 top-16 w-10 h-20 rounded-full bg-white shadow-md z-10">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+    <section class="bg-cream py-10 px-4">
+        <h2 class="text-center text-2xl md:text-3xl font-serif-brand mb-2">
+            People also viewed
+        </h2>
+        <p class="text-center text-xs uppercase tracking-widest text-muted mb-6">
+            Picked by shoppers like you
+        </p>
+        <div class="grid gird-cols-2 gap-10">
+        <div class="view-row max-w-6xl mx-auto">
+            <div class="view-card">
+                <div class="relative">
+                    <a href="product.html">
+                        <img class="w-full h-64 object-cover" src="./images/gadgets/t-shirt.jpg"
+                            alt="Oversized cotton t-shirt">
+                    </a>
+                    <span
+                        class="absolute top-2 left-2 bg-accent text-black text-xs font-semibold px-2 py-1 rounded">NEW</span>
+                    <button class="wish-btn absolute top-2 right-2 bg-white rounded-full w-8 h-8 shadow"
+                        aria-label="Add to wishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="p-3">
+                    <h3 class="text-sm font-semibold">Oversized Cotton T-shirt</h3>
+                    <p class="text-xs text-muted mb-1">StrideX</p>
+                    <p class="text-xs text-accent mb-2">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-regular fa-star"></i>
+                        <span class="text-muted">(128)</span>
+                    </p>
+                    <p>
+                        <span class="font-bold">₹799</span>
+                        <span class="text-xs text-muted line-through ml-1">₹1,299</span>
+                        <span class="text-xs text-green-600 ml-1">38% off</span>
+                    </p>
+                </div>
+            </div>
+            <div class="view-card">
+                <div class="relative">
+                    <a href="product.html">
+                        <img class="w-full h-64 object-cover" src="./images/gadgets/leather.jpg" alt="Classic leather watch">
+                    </a>
+                    <span
+                        class="absolute top-2 left-2 bg-accent text-black text-xs font-semibold px-2 py-1 rounded">BEST
+                        SELLER</span>
+                    <button class="wish-btn absolute top-2 right-2 bg-white rounded-full w-8 h-8 shadow"
+                        aria-label="Add to wishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="p-3">
+                    <h3 class="text-sm font-semibold">Classic Leather Watch</h3>
+                    <p class="text-xs text-muted mb-1">Chronos</p>
+                    <p class="text-xs text-accent mb-2">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                        <span class="text-muted">(342)</span>
+                    </p>
+                    <p>
+                        <span class="font-bold">₹2,499</span>
+                        <span class="text-xs text-muted line-through ml-1">₹3,999</span>
+                        <span class="text-xs text-green-600 ml-1">37% off</span>
+                    </p>
+                </div>
+            </div>
+            <div class="view-card">
+                <div class="relative">
+                    <a href="product.html">
+                        <img class="w-full h-64 object-cover" src="./images/gadgets/western.jpg" alt="Classic leather watch">
+                    </a>
+                    <span
+                        class="absolute top-2 left-2 bg-accent text-black text-xs font-semibold px-2 py-1 rounded">BEST
+                        SELLER</span>
+                    <button class="wish-btn absolute top-2 right-2 bg-white rounded-full w-8 h-8 shadow"
+                        aria-label="Add to wishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="p-3">
+                    <h3 class="text-sm font-semibold">Western</h3>
+                    <p class="text-xs text-muted mb-1">Chronos</p>
+                    <p class="text-xs text-accent mb-2">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                        <span class="text-muted">(342)</span>
+                    </p>
+                    <p>
+                        <span class="font-bold">₹2,499</span>
+                        <span class="text-xs text-muted line-through ml-1">₹3,999</span>
+                        <span class="text-xs text-green-600 ml-1">37% off</span>
+                    </p>
+                </div>
+            </div>
+            <div class="view-card">
+                <div class="relative">
+                    <a href="product.html">
+                        <img class="w-full h-64 object-cover" src="./images/gadgets/hoodie.jpg" alt="Classic leather watch">
+                    </a>
+                    <span
+                        class="absolute top-2 left-2 bg-accent text-black text-xs font-semibold px-2 py-1 rounded">BEST
+                        SELLER</span>
+                    <button class="wish-btn absolute top-2 right-2 bg-white rounded-full w-8 h-8 shadow"
+                        aria-label="Add to wishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="p-3">
+                    <h3 class="text-sm font-semibold">Hoddies</h3>
+                    <p class="text-xs text-muted mb-1">Chronos</p>
+                    <p class="text-xs text-accent mb-2">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                        <span class="text-muted">(342)</span>
+                    </p>
+                    <p>
+                        <span class="font-bold">₹2,499</span>
+                        <span class="text-xs text-muted line-through ml-1">₹3,999</span>
+                        <span class="text-xs text-green-600 ml-1">37% off</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+        <section>
+            <!--Footer-->
+            <div class="w-full bg-black text-sm text-white py-3 pl-10 md:flex gap-14">
+                <div>
+                    <div>
+                        <p class="text-gray-500 font-bold mb-2">ABOUT</p>
+                    </div>
+                    <p>Contact Us</p>
+                    <p>About Us</p>
+                    <p>Careers</p>
+                    <p>Stories</p>
+                    <p>Press</p>
+                    <p>Corporate Information</p>
+                </div>
+                <div>
+                    <div>
+                        <p class="text-gray-500 font-bold mb-2 mt-2">HELP</p>
+                    </div>
+                    <p>Payment</p>
+                    <p>Shipping</p>
+                    <p>Cancellation & Return</p>
+                    <p>FAQ</p>
+                </div>
+                <div>
+                    <div>
+                        <p class="text-gray-500 font-bold mb-2 mt-2">CONSUMER POLICY</p>
+                    </div>
+                    <p>Cancellation & Return</p>
+                    <p>Terms Of Use</p>
+                    <p>Privacy</p>
+                    <p>Security</p>
+                    <p>Press</p>
+                    <p>EPR Compliance</p>
+                </div>
+                <div class="socialmedia flex gap-3 mt-5 justify-center items-center mt-5">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-tiktok"></i>
+                </div>
+            </div>
+        </section>
+</body>
+
+</html>

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <title>Men's Collections</title>
+</head>
+
+<body>
+    <!--discount-->
+    <div id="discount" class="w-full bg-gold-gradient text-primary ... p-5 flex justify-between">
+        <div id="discount" class="relative w-full bg-gold-gradient text-primary py-2 px-10 text-center">
+            <p class="text-xs md:text-sm uppercase tracking-widest">
+                <span class="font-serif-brand">Get ₹400 off your first order</span>
+                <span class="mx-2">|</span>
+                Use code
+                <span class="border border-dashed border-black px-2 py-0.5 font-semibold">FIRST300</span>
+            </p>
+            <button id="close" aria-label="Close offer bar"
+                class="absolute right-4 top-1/2 transform -translate-y-1/2 font-bold">✕</button>
+        </div>
+        <script>
+            const closeBtn = document.getElementById('close');
+            var discount = document.getElementById('discount')
+            closeBtn.addEventListener('click', () => {
+                discount.style.display = 'none';
+            });
+        </script>
+    </div>
+    <!--Navbar section-->
+    <div id="navbar" class="bg-primary w-full flex items-center justify-between relative px-4">
+
+        <a href="index.html" class="flex items-center gap-2">
+            <img src="images/logo-icon.png" alt="Velloxa logo" class="h-14 w-14 object-contain scale-150">
+            <span class="text-xl font-semibold tracking-widest text-accent">VELLOXA</span>
+        </a>
+
+        <!-- Desktop links -->
+        <ul class="hidden md:flex gap-5 text-white">
+            <li><a class="hover:underline" href="index.html">Home</a></li>
+            <li><a class="hover:underline" href="collections.html">Collections</a></li>
+            <li><a class="hover:underline" href="contact.html">Contact</a></li>
+            <li><a class="hover:underline" href="about.html">About</a></li>
+        </ul>
+
+        <!-- Mobile button -->
+        <button id="menuBtn" aria-label="Toggle menu" class="md:hidden text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" width="30" height="30">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
+
+        <!-- Mobile menu -->
+        <ul id="menu"
+            class="hidden absolute right-0 top-full flex-col gap-3 bg-primary text-white text-right px-4 pb-4 z-50">
+            <li><a class="hover:underline" href="index.html">Home</a></li>
+            <li><a class="hover:underline" href="product.html">Collections</a></li>
+            <li><a class="hover:underline" href="contact.html">Contact</a></li>
+            <li><a class="hover:underline" href="about.html">About</a></li>
+        </ul>
+    </div>
+    <section class="bg-cream py-10 px-4">
+        <h2 class="text-center text-2xl md:text-3xl font-serif-brand mb-6">
+            Everything You Love, All in One Place
+        </h2>
+        <picture>
+            <img class="w-full h-auto object-cover object-center" src="./images/men's_wear/men banner.jpg"
+                alt="Banner image">
+        </picture>
+    </section>
+    <section>
+        <!--Search Box-->
+        <div class="p-4">
+            <h1 class="text-center text-2xl md:text-3xl font-serif-brand mb-6">Our Products</h1>
+            <div class="border-2 border-gray-300 p-2 mx-auto max-w-2xl mt-2"><input id="searchBox"
+                    class="w-full flex-1 outline-none ml-0 bg-transparent" type="text"
+                    placeholder="Shirts/Formal/Casual/T-shirt/Shoes/watches..." /></div>
+        </div>
+    </section>
+    <section>
+        <!--All products list-->
+        <div id="productGrid" class="grid grid-cols-2 gap-2 md:grid-cols-4 gap-6 p-5">
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/shirt1.jpg"
+                        alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star text-green-600 text-xs"></i> (705)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Formal Shirt</p>
+                <span class="text-green-600 font-semibold">↓72% </span>
+                <span><del>₹799</del> 499</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/shoe1.jpg"
+                        alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star text-green-600 text-xs"></i> (705)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Formal Shoes</p>
+                <span class="text-green-600 font-semibold">↓72% </span>
+                <span><del>₹799</del> 499</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/c2.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star text-green-600 text-xs"></i> (705)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Causual Shirt</p>
+                <span class="text-green-600 font-semibold">↓72% </span>
+                <span><del>₹799</del> 499</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/shirt1.jpg"
+                        alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star text-green-600 text-xs"></i> (705)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Formal Shirt</p>
+                <span class="text-green-600 font-semibold">↓72% </span>
+                <span><del>₹799</del> 499</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/t1.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star text-green-600 text-xs"></i> (705)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">T-Shirt</p>
+                <span class="text-green-600 font-semibold">↓72% </span>
+                <span><del>₹799</del> 499</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/c1.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.3 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (3.5k+)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Casual Shirt</p>
+                <span class="text-green-600 font-semibold">↓19% </span>
+                <span><del>₹2599</del> 1599</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/shirt2.jpg"
+                        alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.5 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (2533)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Shirt</p>
+                <span class="text-green-600 font-semibold">↓59% </span>
+                <span><del>₹1999</del> 999</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/t2.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star text-green-600 text-xs"></i> (705)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">T-Shirt</p>
+                <span class="text-green-600 font-semibold">↓72% </span>
+                <span><del>₹799</del> 499</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/shoe2.jpg"
+                        alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star text-green-600 text-xs"></i> (705)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Formal Shoes</p>
+                <span class="text-green-600 font-semibold">↓72% </span>
+                <span><del>₹799</del> 499</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/shirt3.jpg"
+                        alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.3 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (1503)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Shirt</p>
+                <span class="text-green-600 font-semibold">↓65% </span>
+                <span><del>₹2499</del> 1599</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/c3.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star text-green-600 text-xs"></i> (705)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Casual Shirt</p>
+                <span class="text-green-600 font-semibold">↓72% </span>
+                <span><del>₹799</del> 499</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/t3.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star text-green-600 text-xs"></i> (705)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">T-Shirt</p>
+                <span class="text-green-600 font-semibold">↓72% </span>
+                <span><del>₹799</del> 499</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/shoe3.jpg"
+                        alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star text-green-600 text-xs"></i> (705)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Formal Shoes</p>
+                <span class="text-green-600 font-semibold">↓72% </span>
+                <span><del>₹799</del> 499</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/shirt4.jpg"
+                        alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.3 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (1653)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Shirt</p>
+                <span class="text-green-600 font-semibold">↓49% </span>
+                <span><del>₹1499</del> 799</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/t4.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star text-green-600 text-xs"></i> (705)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">T-Shirt</p>
+                <span class="text-green-600 font-semibold">↓72% </span>
+                <span><del>₹799</del> 499</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/c4.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star text-green-600 text-xs"></i> (705)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Casual Shirt</p>
+                <span class="text-green-600 font-semibold">↓72% </span>
+                <span><del>₹799</del> 499</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/shoe4.jpg"
+                        alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star text-green-600 text-xs"></i> (705)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Formal Shoes</p>
+                <span class="text-green-600 font-semibold">↓72% </span>
+                <span><del>₹799</del> 499</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/shirt5.jpg"
+                        alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.3 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (1653)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Shirt</p>
+                <span class="text-green-600 font-semibold">↓19% </span>
+                <span><del>₹1899</del> 1499</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/t5.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star text-green-600 text-xs"></i> (705)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">T-Shirt</p>
+                <span class="text-green-600 font-semibold">↓72% </span>
+                <span><del>₹799</del> 499</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/c5.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star text-green-600 text-xs"></i> (705)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Casual Shirt</p>
+                <span class="text-green-600 font-semibold">↓72% </span>
+                <span><del>₹799</del> 499</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/shoe5.jpg"
+                        alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star text-green-600 text-xs"></i> (705)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Formal Shoes</p>
+                <span class="text-green-600 font-semibold">↓72% </span>
+                <span><del>₹799</del> 499</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/shirt6.jpg"
+                        alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.3 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (3.5k+)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Shirt</p>
+                <span class="text-green-600 font-semibold">↓19% </span>
+                <span><del>₹2599</del> 1599</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/t5.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star text-green-600 text-xs"></i> (705)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">T-Shirt</p>
+                <span class="text-green-600 font-semibold">↓72% </span>
+                <span><del>₹799</del> 499</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/c5.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star text-green-600 text-xs"></i> (705)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Casual Shirt</p>
+                <span class="text-green-600 font-semibold">↓72% </span>
+                <span><del>₹799</del> 499</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/shoe5.jpg"
+                        alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star text-green-600 text-xs"></i> (705)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Formal Shoes</p>
+                <span class="text-green-600 font-semibold">↓72% </span>
+                <span><del>₹799</del> 499</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/shirt1.jpg"
+                        alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.5 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (2.5k+)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Shirt</p>
+                <span class="text-green-600 font-semibold">↓36% </span>
+                <span><del>₹1499</del> 899</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl"
+                        src="./images/collections/products/straigth kurta.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (1.5k+)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Straight Kurta</p>
+                <span class="text-green-600 font-semibold">↓36% </span>
+                <span><del>₹999</del> 499</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/s1.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (1.5k+)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Sneaker</p>
+                <span class="text-green-600 font-semibold">↓36% </span>
+                <span><del>₹1599</del> 999</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/s2.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (1.5k+)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Sneaker</p>
+                <span class="text-green-600 font-semibold">↓36% </span>
+                <span><del>₹1599</del> 999</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/s3.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (1.5k+)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Sneaker</p>
+                <span class="text-green-600 font-semibold">↓36% </span>
+                <span><del>₹1599</del> 999</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/w1.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (1.5k+)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Watches</p>
+                <span class="text-green-600 font-semibold">↓36% </span>
+                <span><del>₹1599</del> 999</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/w2.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (1.5k+)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Watches</p>
+                <span class="text-green-600 font-semibold">↓36% </span>
+                <span><del>₹1599</del> 999</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/w3.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (1.5k+)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Watches</p>
+                <span class="text-green-600 font-semibold">↓36% </span>
+                <span><del>₹1599</del> 999</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/w4.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (1.5k+)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Watches</p>
+                <span class="text-green-600 font-semibold">↓36% </span>
+                <span><del>₹1599</del> 999</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/w5.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (1.5k+)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Watches</p>
+                <span class="text-green-600 font-semibold">↓36% </span>
+                <span><del>₹1599</del> 999</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/w6.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (1.5k+)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Watches</p>
+                <span class="text-green-600 font-semibold">↓36% </span>
+                <span><del>₹1599</del> 999</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/w7.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (1.5k+)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Watches</p>
+                <span class="text-green-600 font-semibold">↓36% </span>
+                <span><del>₹1599</del> 999</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/w8.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (1.5k+)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Watches</p>
+                <span class="text-green-600 font-semibold">↓36% </span>
+                <span><del>₹1599</del> 999</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl" src="./images/men's_wear/w9.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (1.5k+)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Watches</p>
+                <span class="text-green-600 font-semibold">↓36% </span>
+                <span><del>₹1599</del> 999</span>
+            </div>
+            <p id="noResult" class="hidden text-center text-muted py-10">No products found. Try another word.</p>
+        </div>
+    </section>
+    <section>
+        <!--Footer-->
+        <div class="w-full bg-black text-sm text-white py-3 pl-10 md:flex gap-14">
+            <div>
+                <div>
+                    <p class="text-gray-500 font-bold mb-2">ABOUT</p>
+                </div>
+                <p>Contact Us</p>
+                <p>About Us</p>
+                <p>Careers</p>
+                <p>Stories</p>
+                <p>Press</p>
+                <p>Corporate Information</p>
+            </div>
+            <div>
+                <div>
+                    <p class="text-gray-500 font-bold mb-2 mt-2">HELP</p>
+                </div>
+                <p>Payment</p>
+                <p>Shipping</p>
+                <p>Cancellation & Return</p>
+                <p>FAQ</p>
+            </div>
+            <div>
+                <div>
+                    <p class="text-gray-500 font-bold mb-2 mt-2">CONSUMER POLICY</p>
+                </div>
+                <p>Cancellation & Return</p>
+                <p>Terms Of Use</p>
+                <p>Privacy</p>
+                <p>Security</p>
+                <p>Press</p>
+                <p>EPR Compliance</p>
+            </div>
+            <div class="socialmedia flex gap-3 mt-5 justify-center items-center mt-5">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+        </div>
+    </section>
+    <script>
+        const searchBox = document.getElementById('searchBox');
+        const productGrid = document.getElementById('productGrid');
+        const noResult = document.getElementById('noResult');
+
+        if (searchBox && productGrid) {
+            searchBox.addEventListener('input', function () {
+                const text = searchBox.value.toLowerCase().trim();
+                let found = 0;
+
+                for (const card of productGrid.children) {
+                    const name = card.querySelector('p').textContent.toLowerCase();
+
+                    if (name.includes(text)) {
+                        card.style.display = '';
+                        found++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+
+                if (noResult) {
+                    noResult.classList.toggle('hidden', found > 0);
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

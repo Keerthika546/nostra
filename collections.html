@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <title>Collections</title>
+</head>
+
+<body>
+    <!--discount-->
+    <div id="discount" class="w-full bg-gold-gradient text-primary ... p-5 flex justify-between">
+        <div id="discount" class="relative w-full bg-gold-gradient text-primary py-2 px-10 text-center">
+            <p class="text-xs md:text-sm uppercase tracking-widest">
+                <span class="font-serif-brand">Get ₹400 off your first order</span>
+                <span class="mx-2">|</span>
+                Use code
+                <span class="border border-dashed border-black px-2 py-0.5 font-semibold">FIRST300</span>
+            </p>
+            <button id="close" aria-label="Close offer bar"
+                class="absolute right-4 top-1/2 transform -translate-y-1/2 font-bold">✕</button>
+        </div>
+        <script>
+            const closeBtn = document.getElementById('close');
+            var discount = document.getElementById('discount')
+            closeBtn.addEventListener('click', () => {
+                discount.style.display = 'none';
+            });
+        </script>
+    </div>
+    <!--Navbar section-->
+    <div id="navbar" class="bg-primary w-full flex items-center justify-between relative px-4">
+
+        <a href="index.html" class="flex items-center gap-2">
+            <img src="images/logo-icon.png" alt="Velloxa logo" class="h-14 w-14 object-contain scale-150">
+            <span class="text-xl font-semibold tracking-widest text-accent">VELLOXA</span>
+        </a>
+
+        <!-- Desktop links -->
+        <ul class="hidden md:flex gap-5 text-white">
+            <li><a class="hover:underline" href="index.html">Home</a></li>
+            <li><a class="hover:underline" href="collections.html">Collections</a></li>
+            <li><a class="hover:underline" href="contact.html">Contact</a></li>
+            <li><a class="hover:underline" href="about.html">About</a></li>
+        </ul>
+
+        <!-- Mobile button -->
+        <button id="menuBtn" aria-label="Toggle menu" class="md:hidden text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" width="30" height="30">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
+
+        <!-- Mobile menu -->
+        <ul id="menu"
+            class="hidden absolute right-0 top-full flex-col gap-3 bg-primary text-white text-right px-4 pb-4 z-50">
+            <li><a class="hover:underline" href="index.html">Home</a></li>
+            <li><a class="hover:underline" href="collections.html">Collections</a></li>
+            <li><a class="hover:underline" href="contact.html">Contact</a></li>
+            <li><a class="hover:underline" href="about.html">About</a></li>
+        </ul>
+    </div>
+    <section class="bg-cream py-10 px-4">
+        <h2 class="text-center text-2xl md:text-3xl font-serif-brand mb-6">
+            Everything You Love, All in One Place
+        </h2>
+        <picture>
+            <source media="(max-width: 767px)" srcset="./images/collections/b1.jpg">
+            <img class="w-full h-auto object-cover object-center" src="./images/collections/b2.jpg" alt="Banner image">
+        </picture>
+    </section>
+    <section>
+        <!--side bar offer-->
+        <div class="relative">
+            <div id="dealsRow" class="deals-row rounded-xl flex gap-4 w-full justify-start overflow-x-auto mt-10 p-5">
+                <div class="flex-shrink-0 w-70 transform transition-transform duration-300 hover:-translate-y-1">
+                    <a href="./men's collections.html"><img class="w-full h-40 object-cover rounded-xl" src="./images/collections/formalshoes.jpg"
+                        alt="Wireless Earbuds"></a>
+                </div>
+                <div class="flex-shrink-0 w-70 transform transition-transform duration-300 hover:-translate-y-1">
+                    <a href="./men's collections.html"><img class="w-full h-40 object-cover rounded-xl" src="./images/collections/sneaker.jpg"
+                        alt="Wireless Earbuds"></a>
+                </div>
+                <div class="flex-shrink-0 w-70 transform transition-transform duration-300 hover:-translate-y-1">
+                    <img class="w-full h-40 object-cover rounded-xl" src="./images/collections/trolly.jpg"
+                        alt="Wireless Earbuds">
+                </div>
+                <div class="flex-shrink-0 w-70 transform transition-transform duration-300 hover:-translate-y-1">
+                    <a href="./men's collections.html"><img class="w-full h-40 object-cover rounded-xl" src="./images/collections/watches.jpg"
+                        alt="Wireless Earbuds"></a>
+                </div>
+                <div class="flex-shrink-0 w-70 transform transition-transform duration-300 hover:-translate-y-1">
+                    <a href="./women's collection.html"><img class="w-full h-40 object-cover rounded-xl" src="./images/collections/women's_collection.jpg"
+                        alt="Wireless Earbuds"></a>
+                </div>
+                <div class="flex-shrink-0 w-70 transform transition-transform duration-300 hover:-translate-y-1">
+                    <a href="./kids collection.html"><img class="w-full h-40 object-cover rounded-xl" src="./images/collections/kids.jpg"
+                        alt="Wireless Earbuds"></a>
+                </div>
+            
+            </div>
+            <button id="dealsPrev" aria-label="Scroll left"
+                class="hidden md:block absolute left-2 top-16 w-10 h-20 rounded-full bg-white shadow-md z-10">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button id="dealsNext" aria-label="Scroll right"
+                class="hidden md:block absolute right-2 top-16 w-10 h-20 rounded-full bg-white shadow-md z-10">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+    <section>
+        <!--products with links-->
+        <div style="background: #111111;"
+            class="grid grid-cols-2 gap-2 md:grid-cols-5 gap-6 p-4 rounded-xl w-full border-4 border-yellow-800 mt-10 p-10">
+            <div class="flex-shrink-0 transform transition-transform duration-300 hover:-translate-y-1">
+                <a href="./men's collections.html"></a><img class="w-full h-40 object-cover rounded-xl" src="./images/collections/shirts.jpg"
+                    alt="Wireless Earbuds"></a>
+                <p class="text-center text-sm font-medium text-accent mt-2">Shirts</p>
+            </div>
+            <div class="flex-shrink-0 transform transition-transform duration-300 hover:-translate-y-1">
+                <a href="./men's collections.html"><img class="w-full h-40 object-cover rounded-xl" src="./images/collections/jeans.jpg"
+                    alt="Wireless Earbuds"></a>
+                <p class="text-center text-sm font-medium text-accent mt-2">Shirts</p>
+            </div>
+            <div class="flex-shrink-0 transform transition-transform duration-300 hover:-translate-y-1">
+                <a href="./men's collections.html"><img class="w-full h-40 object-cover rounded-xl" src="./images/collections/sport.jpg"
+                    alt="Wireless Earbuds"></a>
+                <p class="text-center text-sm font-medium text-accent mt-2">Sports Shoes</p>
+            </div>
+            <div class="flex-shrink-0 transform transition-transform duration-300 hover:-translate-y-1">
+                <a href="./men's collections.html"><img class="w-full h-40 object-cover rounded-xl" src="./images/collections/watch.jpg"
+                    alt="Wireless Earbuds"></a>
+                <p class="text-center text-sm font-medium text-accent mt-2">Watches</p>
+            </div>
+            <div class="flex-shrink-0 transform transition-transform duration-300 hover:-translate-y-1">
+                <a href="./men's collections.html"><img class="w-full h-40 object-cover rounded-xl" src="./images/collections/formal.jpg"
+                    alt="Wireless Earbuds"></a>
+                <p class="text-center text-sm font-medium text-accent mt-2">Formals</p>
+            </div>
+            <div class="flex-shrink-0 transform transition-transform duration-300 hover:-translate-y-1">
+                <a href="./men's collections.html"><img class="w-full h-40 object-cover rounded-xl" src="./images/collections/casual.jpg"
+                    alt="Wireless Earbuds"></a>
+                <p class="text-center text-sm font-medium text-accent mt-2">Causual</p>
+            </div>
+            <div class="flex-shrink-0 transform transition-transform duration-300 hover:-translate-y-1">
+                <img class="w-full h-40 object-cover rounded-xl" src="./images/collections/handbags.jpg"
+                    alt="Wireless Earbuds">
+                <p class="text-center text-sm font-medium text-accent mt-2">Handbags</p>
+            </div>
+            <div class="flex-shrink-0 transform transition-transform duration-300 hover:-translate-y-1">
+                <img class="w-full h-40 object-cover rounded-xl" src="./images/collections/kurta.jpg"
+                    alt="Wireless Earbuds">
+                <p class="text-center text-sm font-medium text-accent mt-2">Kurta Sets</p>
+            </div>
+            <div class="flex-shrink-0 transform transition-transform duration-300 hover:-translate-y-1">
+                <a href="./women's collection.html"><img class="w-full h-40 object-cover rounded-xl" src="./images/collections/saree.jpg"
+                    alt="Wireless Earbuds"></a>
+                <p class="text-center text-sm font-medium text-accent mt-2">Sarees</p>
+            </div>
+            <div class="flex-shrink-0 transform transition-transform duration-300 hover:-translate-y-1">
+                <a href="./women's collection.html"><img class="w-full h-40 object-cover rounded-xl" src="./images/collections/jwellery.jpg"
+                    alt="Wireless Earbuds"></a>
+                <p class="text-center text-sm font-medium text-accent mt-2">Jewellery Set</p>
+            </div>
+            <div class="flex-shrink-0 transform transition-transform duration-300 hover:-translate-y-1">
+                <a href="./women's collection.html"></a><img class="w-full h-40 object-cover rounded-xl" src="./images/collections/heels.jpg"
+                    alt="Wireless Earbuds"></a>
+                <p class="text-center text-sm font-medium text-accent mt-2">Heels</p>
+            </div>
+            <div class="flex-shrink-0 transform transition-transform duration-300 hover:-translate-y-1">
+                <a href="./women's collection.html"><img class="w-full h-40 object-cover rounded-xl" src="./images/collections/flats.jpg"
+                    alt="Wireless Earbuds"></a>
+                <p class="text-center text-sm font-medium text-accent mt-2">Flats</p>
+            </div>
+            <div class="flex-shrink-0 transform transition-transform duration-300 hover:-translate-y-1">
+                <a href="./women's collection.html"><img class="w-full h-40 object-cover rounded-xl" src="./images/collections/beauty.jpg"
+                    alt="Wireless Earbuds"></a>
+                <p class="text-center text-sm font-medium text-accent mt-2">Beauty Products</p>
+            </div>
+            <div class="flex-shrink-0 transform transition-transform duration-300 hover:-translate-y-1">
+                <img class="w-full h-40 object-cover rounded-xl" src="./images/collections/trolly1.jpg"
+                    alt="Wireless Earbuds">
+                <p class="text-center text-sm font-medium text-accent mt-2">Trolley</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="relative mx-5">
+            <img class="w-full h-50 object-cover mt-5 rounded-xl" src="./images/collections/products/sales_banners.jpg">
+            <button class="absolute bottom-4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-red-600 text-white font-semibold rounded-full px-6 py-2">Shop Now</button>
+        </div>
+
+    </section>
+    <section>
+        <!--All products list-->
+        <div class="grid grid-cols-2 gap-2 md:grid-cols-4 gap-6 p-5">
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl"
+                        src="./images/collections/products/a-line kurta.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star text-green-600 text-xs"></i> (705)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">A-Line Kurta</p>
+                <span class="text-green-600 font-semibold">↓72% </span>
+                <span><del>₹799</del> 499</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl"
+                        src="./images/collections/products/anarkali.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.5 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (2533)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Anarkali</p>
+                <span class="text-green-600 font-semibold">↓59% </span>
+                <span><del>₹1999</del> 999</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl"
+                        src="./images/collections/products/dennim.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.3 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (1503)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Dennim Jacket</p>
+                <span class="text-green-600 font-semibold">↓65% </span>
+                <span><del>₹2499</del> 1599</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl"
+                        src="./images/collections/products/doti.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.3 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (1653)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Doti</p>
+                <span class="text-green-600 font-semibold">↓49% </span>
+                <span><del>₹1499</del> 799</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl"
+                        src="./images/collections/products/ethinic.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.3 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (1653)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Men's Ethinic</p>
+                <span class="text-green-600 font-semibold">↓19% </span>
+                <span><del>₹1899</del> 1499</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl"
+                        src="./images/collections/products/floral anarkali.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.3 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (3.5k+)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Floral Printed Anarkali</p>
+                <span class="text-green-600 font-semibold">↓19% </span>
+                <span><del>₹2599</del> 1599</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl"
+                        src="./images/collections/products/kids_party.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.5 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (2.5k+)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Kids Part Wear</p>
+                <span class="text-green-600 font-semibold">↓36% </span>
+                <span><del>₹1499</del> 899</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl"
+                        src="./images/collections/products/straigth kurta.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (1.5k+)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Straight Kurta</p>
+                <span class="text-green-600 font-semibold">↓36% </span>
+                <span><del>₹999</del> 499</span>
+            </div>
+            <div class="flex-shrink-0 w-40 md:w-60 transform transition-transform duration-300 hover:-translate-y-1">
+                <div class="relative">
+                    <img class="w-full h-56 md:h-80 object-cover rounded-xl"
+                        src="./images/collections/products/waist coat.jpg" alt="...">
+                    <span class="absolute bottom-2 left-2 bg-white rounded-md px-2 py-1 text-sm font-semibold">
+                        4.1 <i class="fa-solid fa-star-half-stroke text-green-600 text-xs"></i> (1.5k+)
+                    </span>
+                </div>
+                <p class="text-left text-sm font-medium text-primary mt-2">Waist Coat</p>
+                <span class="text-green-600 font-semibold">↓36% </span>
+                <span><del>₹1599</del> 999</span>
+            </div>
+        </div>
+    </section>
+    <section>
+        <!--Footer-->
+        <div class="w-full bg-black text-sm text-white py-3 pl-10 md:flex gap-14">
+            <div>
+                <div>
+                    <p class="text-gray-500 font-bold mb-2">ABOUT</p>
+                </div>
+                <p>Contact Us</p>
+                <p>About Us</p>
+                <p>Careers</p>
+                <p>Stories</p>
+                <p>Press</p>
+                <p>Corporate Information</p>
+            </div>
+            <div>
+                <div>
+                    <p class="text-gray-500 font-bold mb-2 mt-2">HELP</p>
+                </div>
+                <p>Payment</p>
+                <p>Shipping</p>
+                <p>Cancellation & Return</p>
+                <p>FAQ</p>
+            </div>
+            <div>
+                <div>
+                    <p class="text-gray-500 font-bold mb-2 mt-2">CONSUMER POLICY</p>
+                </div>
+                <p>Cancellation & Return</p>
+                <p>Terms Of Use</p>
+                <p>Privacy</p>
+                <p>Security</p>
+                <p>Press</p>
+                <p>EPR Compliance</p>
+            </div>
+            <div class="socialmedia flex gap-3 mt-5 justify-center items-center mt-5">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

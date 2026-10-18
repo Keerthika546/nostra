@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="navbar" class="bg-primary w-full flex items-center justify-between relative px-4">
+
+        <a href="index.html" class="flex items-center gap-2">
+            <img src="images/logo-icon.png" alt="Velloxa logo" class="h-14 w-14 object-contain scale-150">
+            <span class="text-xl font-semibold tracking-widest text-accent">VELLOXA</span>
+        </a>
+
+        <!-- Desktop links -->
+        <ul class="hidden md:flex gap-5 text-white">
+            <li><a class="hover:underline" href="index.html">Home</a></li>
+            <li><a class="hover:underline" href="collections.html">Collections</a></li>
+            <li><a class="hover:underline" href="contact.html">Contact</a></li>
+            <li><a class="hover:underline" href="about.html">About</a></li>
+        </ul>
+
+        <!-- Mobile button -->
+        <button id="menuBtn" aria-label="Toggle menu" class="md:hidden text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" width="30" height="30">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
+
+        <!-- Mobile menu -->
+        <ul id="menu"
+            class="hidden absolute right-0 top-full flex-col gap-3 bg-primary text-white text-right px-4 pb-4 z-50">
+            <li><a class="hover:underline" href="index.html">Home</a></li>
+            <li><a class="hover:underline" href="collections.html">Collections</a></li>
+            <li><a class="hover:underline" href="contact.html">Contact</a></li>
+            <li><a class="hover:underline" href="about.html">About</a></li>
+        </ul>
+    </div>
+    <section class="bg-white dark:bg-gray-900">
+        <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">We’d Love to Hear From You.</h2>
+            <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Order arrived late or damaged? Need help with size or fit? Want to know about returns or bulk orders? Get in touch, we’re happy to help.</p>
+            <form action="#" class="space-y-8">
+                <div>
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
+                    <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@gmail.com" required>
+                </div>
+                <div>
+                    <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
+                    <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Let us know how we can help you" required>
+                </div>
+                <div class="sm:col-span-2">
+                    <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
+                    <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..."></textarea>
+                </div>
+                <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send message</button>
+            </form>
+        </div>
+      </section>
+      <section>
+        <!--Footer-->
+        <div class="w-full bg-black text-sm text-white py-3 pl-10 md:flex gap-14">
+            <div>
+                <div>
+                    <p class="text-gray-500 font-bold mb-2">ABOUT</p>
+                </div>
+                <p>Contact Us</p>
+                <p>About Us</p>
+                <p>Careers</p>
+                <p>Stories</p>
+                <p>Press</p>
+                <p>Corporate Information</p>
+            </div>
+            <div>
+                <div>
+                    <p class="text-gray-500 font-bold mb-2 mt-2">HELP</p>
+                </div>
+                <p>Payment</p>
+                <p>Shipping</p>
+                <p>Cancellation & Return</p>
+                <p>FAQ</p>
+            </div>
+            <div>
+                <div>
+                    <p class="text-gray-500 font-bold mb-2 mt-2">CONSUMER POLICY</p>
+                </div>
+                <p>Cancellation & Return</p>
+                <p>Terms Of Use</p>
+                <p>Privacy</p>
+                <p>Security</p>
+                <p>Press</p>
+                <p>EPR Compliance</p>
+            </div>
+            <div class="socialmedia flex gap-3 mt-5 justify-center items-center mt-5">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
